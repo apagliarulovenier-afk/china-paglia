@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "China&Paglia — Identidad y dirección creativa",
   description:
     "Consultoría de branding, comunicación y dirección creativa para empresas y desarrollos en crecimiento, transformación o expansión.",
-  other: { "codex-preview": "development" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -20,20 +20,19 @@ const anaWork = [
 ];
 
 const antoWork = [
-  "/gallery/anto-caramia.jpg",
-  "/gallery/anto-etereo.jpg",
-  "/gallery/anto-wine.jpg",
-  "/gallery/anto-revival.jpg",
-  "/gallery/anto-loca.jpg",
+  "/gallery/anto-updated/enroscado.jpg",
+  "/gallery/anto-updated/etero-render.jpg",
+  "/gallery/anto-updated/img-0401.jpeg",
+  "/gallery/anto-updated/foresta.jpg",
+  "/gallery/anto-updated/imagen-2.jpg",
+  "/gallery/anto-updated/lardebarros.jpg",
 ];
 
 const heroWork = [
-  "/cases/mutante.webp",
-  "/gallery/anto-caramia.jpg",
-  "/gallery/ana-armentano.jpg",
-  "/gallery/anto-etereo.jpg",
-  "/gallery/ana-chozos.jpg",
-  "/gallery/anto-revival.jpg",
+  "/slider/mutante-main.jpg",
+  "/slider/fontalba-main.jpg",
+  "/slider/mutante-bitacora.jpg",
+  "/slider/mutante-carteleria.jpg",
 ];
 
 function ImageRail({ images, compact = false, label }: { images: string[]; compact?: boolean; label: string }) {
@@ -54,7 +53,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#inicio" aria-label="China y Paglia, inicio">CHINA<span>&amp;</span>PAGLIA</a>
+        <a className="wordmark" href="#inicio" aria-label="China y Paglia, inicio"><Image src="/brand/logo-negro.png" alt="China & Paglia" width={3374} height={488} priority unoptimized /></a>
         <nav className="desktop-nav" aria-label="Navegación principal">
           <a href="#que-hacemos">Qué hacemos</a><a href="#casos">Casos</a><a href="#como-trabajamos">Cómo trabajamos</a><a href="#nosotras">Nosotras</a>
         </nav>
@@ -123,7 +122,7 @@ export default function Home() {
         <div className="section-kicker">Cómo trabajamos</div>
         <div className="working-heading"><h2>¿Cómo trabajamos?</h2><p>No todas las marcas necesitan empezar por el mismo lugar. Definimos el alcance según el momento del negocio, la profundidad del desafío y la capacidad interna para implementarlo.</p></div>
         <div className="working-models">
-          <article className="working-project"><div><h3>Proyecto a medida</h3><p>Alcances definidos para branding, comunicación, campañas, web o nuevos desarrollos.</p></div><a href="#contacto" aria-label="Consultar por un proyecto a medida"><Arrow /></a></article>
+          <article className="working-project" tabIndex={0}><div><h3>Proyecto a medida</h3><p>Alcances definidos para branding, comunicación, campañas, web o nuevos desarrollos.</p></div><a href="#contacto" aria-label="Consultar por un proyecto a medida"><Arrow /></a></article>
           <article className="working-fee"><div><h3>Fee · Partner creativo estratégico</h3><p>Acompañamiento continuo para empresas que necesitan dirección, criterio y capacidad creativa sostenida con modalidad de fee mensual.</p></div><a href="#contacto" aria-label="Consultar por acompañamiento mensual"><Arrow /></a></article>
         </div>
       </section>
@@ -173,7 +172,7 @@ export default function Home() {
         </form>
       </section>
 
-      <footer><div className="footer-mark">CHINA<span>&amp;</span>PAGLIA</div><div className="footer-links"><a href="#inicio">Volver arriba ↑</a><a href="mailto:hola@chinapaglia.com">Email</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div><div className="footer-bottom"><span>Creative partners · Mendoza, Argentina</span><span>© 2026 China&Paglia</span></div></footer>
+      <footer><div className="footer-mark"><Image src="/brand/logo-blanco.png" alt="China & Paglia" width={3374} height={488} unoptimized /></div><div className="footer-links"><a href="#inicio">Volver arriba ↑</a><a href="mailto:hola@chinapaglia.com">Email</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></div><div className="footer-bottom"><span>Creative partners · Mendoza, Argentina</span><span>© 2026 China&Paglia</span></div></footer>
     </main>
   );
 }
