@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MobileMenu from "./components/MobileMenu";
+import ProjectModal from "./components/ProjectModal";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -63,11 +64,10 @@ export default function Home() {
 
       <section className="hero" id="inicio">
         <div className="hero-eyebrow"><span>Creative partners</span><span>Mendoza · Argentina</span></div>
-        <h1>Identidad <span className="amp">&amp;</span><br />dirección creativa<br /><span className="hero-light">para negocios en expansión.</span></h1>
+        <h1>Identidad <span className="amp">&amp;</span><br />dirección creativa<br /><span className="hero-light">para negocios sólidos.</span></h1>
         <div className="hero-bottom">
           <div className="hero-intro">
-            <p>Somos Anto y Anita: diseñadoras senior, amigas desde la facultad y hoy socias en una alianza boutique especializada en branding, comunicación y dirección creativa.</p>
-            <p className="hero-manifesto">Convertimos visión de negocio en marca, comunicación y experiencia.</p>
+            <p>Somos Anto y Anita: diseñadoras senior, amigas desde la facultad y hoy socias en una alianza boutique especializada en branding, comunicación y dirección creativa. Convertimos visión de negocio en marca, comunicación y experiencia.</p>
           </div>
           <a className="circle-link" href="#que-hacemos" aria-label="Descubrir qué hacemos">↓</a>
         </div>
@@ -77,10 +77,10 @@ export default function Home() {
       <ImageRail images={heroWork} label="Selección de proyectos" />
 
       <section className="services section-dark" id="que-hacemos">
-        <div className="section-kicker">01 / Qué hacemos</div>
+        <div className="section-kicker">Qué hacemos</div>
         <div className="services-heading">
-          <h2>Trabajamos en la intersección entre estrategia de negocio e identidad de marca.</h2>
-          <p>Somos un partner senior que ayuda a empresas y desarrollos a convertir su estrategia de negocio en una marca consistente, reconocible y lista para expandirse.</p>
+          <h2>Trabajamos en la intersección entre estrategia de negocio e identidad de marca</h2>
+          <p>Somos un partner senior que ayuda a empresas y desarrollos a convertir su estrategia de negocio en una marca consistente y reconocible.</p>
         </div>
         <div className="service-accordion">
           {services.map((service, index) => (
@@ -90,13 +90,12 @@ export default function Home() {
             </details>
           ))}
         </div>
-        <ImageRail images={[...anaWork.slice(0, 3), ...antoWork.slice(0, 3)]} compact label="Detalles de proyectos y sistemas de marca" />
       </section>
 
       <section className="cases" id="casos">
         <div className="cases-intro section">
-          <div className="section-kicker">02 / Casos</div>
-          <div className="cases-intro-grid"><h2>Estrategia, identidad y comunicación en acción.</h2><p>Mostramos procesos donde estrategia, identidad y comunicación se integraron para resolver un momento concreto del negocio.</p></div>
+          <div className="section-kicker">Casos</div>
+          <div className="cases-intro-grid"><h2>Nuestros trabajos</h2></div>
         </div>
 
         <article className="case-panel case-mutante">
@@ -104,6 +103,7 @@ export default function Home() {
             <div className="case-meta"><span>01</span><span>Branding · Real Estate</span></div>
             <h3>Mutante</h3>
             <p>Estrategia e identidad para una nueva unidad de negocio que articula diseño, desarrollo y expansión comercial.</p>
+            <ProjectModal project="mutante" title="Mutante" category="Branding · Real Estate" description="Estrategia e identidad para una nueva unidad de negocio que articula diseño, desarrollo y expansión comercial." image="/cases/mutante.webp" />
           </div>
           <div className="case-panel-media"><Image src="/cases/mutante.webp" alt="Proyecto de branding Mutante" fill unoptimized sizes="(max-width: 900px) 100vw, 58vw" /></div>
         </article>
@@ -113,6 +113,7 @@ export default function Home() {
             <div className="case-meta"><span>02</span><span>Dirección creativa · Marketing digital</span></div>
             <h3>Fontalba</h3>
             <p>Dirección creativa y sistema de contenidos para ordenar la comunicación de una marca de aceite de oliva y sostener su presencia digital.</p>
+            <ProjectModal project="fontalba" title="Fontalba" category="Dirección creativa · Marketing digital" description="Dirección creativa y sistema de contenidos para ordenar la comunicación de una marca de aceite de oliva y sostener su presencia digital." />
           </div>
           <div className="fontalba-canvas" aria-label="Composición visual del caso Fontalba">
             <span className="fontalba-word">FONTALBA</span>
@@ -125,7 +126,7 @@ export default function Home() {
       </section>
 
       <section className="working section" id="como-trabajamos">
-        <div className="section-kicker">03 / Cómo trabajamos</div>
+        <div className="section-kicker">Cómo trabajamos</div>
         <div className="working-heading"><h2>¿Cómo trabajamos?</h2><p>No todas las marcas necesitan empezar por el mismo lugar. Definimos el alcance según el momento del negocio, la profundidad del desafío y la capacidad interna para implementarlo.</p></div>
         <div className="working-models">
           <article><span>01</span><div><h3>Proyecto a medida</h3><p>Alcances definidos para branding, comunicación, campañas, web o nuevos desarrollos.</p></div><a href="#contacto" aria-label="Consultar por un proyecto a medida"><Arrow /></a></article>
@@ -134,33 +135,40 @@ export default function Home() {
       </section>
 
       <section className="people section-dark" id="nosotras">
-        <div className="section-kicker">04 / Nosotras</div>
+        <div className="section-kicker">Nosotras</div>
         <div className="people-story">
           <h2>Dos trayectorias.<br />Una mirada compartida.</h2>
           <div><p>Somos Ana y Anto. Nos conocimos estudiando Diseño y, después de más de una década de recorridos complementarios, en 2026 decidimos reunir nuestra experiencia en branding, dirección creativa, comunicación y negocios en una nueva alianza creativo-estratégica.</p><p>En cada proyecto miramos primero el negocio y después el diseño: preguntamos, ordenamos y construimos junto a nuestros clientes.</p></div>
         </div>
 
-        <article className="person-profile">
-          <div className="person-portrait"><Image src="/people/ana.webp" alt="Ana Paula Sánchez" fill unoptimized sizes="(max-width: 900px) 100vw, 40vw" /></div>
-          <div className="person-copy"><span>Branding · Real Estate · Comunicación</span><h3>Ana Paula Sánchez</h3><p>Ana se especializa en branding, marketing y comunicación corporativa, con experiencia especialmente vinculada al real estate. Conoce el negocio inmobiliario desde adentro y tiene una facilidad natural para conectar personas, leer contextos y convertir conversaciones complejas en decisiones claras.</p><p className="person-detail">Practica yoga y juega al pádel: equilibrio y reflejos que también aparecen en su forma de trabajar.</p><a href="https://www.linkedin.com/in/anitasanchezr" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></div>
-        </article>
-        <div className="person-gallery" aria-label="Selección de trabajos previos de Ana Paula Sánchez">{anaWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="20vw" /></div>)}</div>
-
-        <article className="person-profile person-profile-reverse">
-          <div className="person-portrait"><Image src="/people/anto.webp" alt="Antonella Pagliarulo" fill unoptimized sizes="(max-width: 900px) 100vw, 40vw" /></div>
-          <div className="person-copy"><span>Branding · Dirección creativa · Diseño</span><h3>Antonella Pagliarulo</h3><p>Antonella desarrolló su recorrido entre estudios de diseño, empresas y práctica independiente, trabajando con marcas de consumo y equipos internacionales de FMCG. Se especializó en branding y packaging en Barcelona.</p><p className="person-detail">Organizada, pragmática y orientada a procesos, convierte desafíos complejos en dinámicas y herramientas creativo-estratégicas que permiten avanzar.</p><a href="https://www.linkedin.com/in/antonellapagliarulo" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a></div>
-        </article>
-        <div className="person-gallery" aria-label="Selección de trabajos previos de Antonella Pagliarulo">{antoWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="20vw" /></div>)}</div>
+        <div className="people-grid">
+          <article className="person-card">
+            <div className="person-top"><Image src="/people/ana.webp" alt="Ana Paula Sánchez" width={112} height={112} unoptimized /><span>Branding · Real Estate · Comunicación</span></div>
+            <h3>Ana Paula Sánchez</h3>
+            <p>Ana se especializa en branding, marketing y comunicación corporativa, con experiencia especialmente vinculada al real estate. Conoce el negocio inmobiliario desde adentro y tiene una facilidad natural para conectar personas, leer contextos y convertir conversaciones complejas en decisiones claras.</p>
+            <p className="person-detail">Practica yoga y juega al pádel: equilibrio y reflejos que también aparecen en su forma de trabajar.</p>
+            <a href="https://www.linkedin.com/in/anitasanchezr" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+            <div className="person-gallery" aria-label="Selección de trabajos previos de Ana Paula Sánchez">{anaWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="10vw" /></div>)}</div>
+          </article>
+          <article className="person-card person-card-alt">
+            <div className="person-top"><Image src="/people/anto.webp" alt="Antonella Pagliarulo" width={112} height={112} unoptimized /><span>Branding · Dirección creativa · Diseño</span></div>
+            <h3>Antonella Pagliarulo</h3>
+            <p>Antonella desarrolló su recorrido entre estudios de diseño, empresas y práctica independiente, trabajando con marcas de consumo y equipos internacionales de FMCG. Se especializó en branding y packaging en Barcelona.</p>
+            <p className="person-detail">Organizada, pragmática y orientada a procesos, convierte desafíos complejos en dinámicas y herramientas creativo-estratégicas que permiten avanzar.</p>
+            <a href="https://www.linkedin.com/in/antonellapagliarulo" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+            <div className="person-gallery" aria-label="Selección de trabajos previos de Antonella Pagliarulo">{antoWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="10vw" /></div>)}</div>
+          </article>
+        </div>
       </section>
 
       <section className="technology" id="ecosistema">
-        <span className="tech-label">05 / Capacidad complementaria</span>
+        <span className="tech-label">Capacidad complementaria</span>
         <div><h2>Ecosistema digital operativo</h2><p>Cuando el desafío lo requiere, sumamos capacidad tecnológica y operativa para desarrollar herramientas que ayuden a optimizar procesos, centralizar información y mejorar la coordinación interna de nuestros clientes.</p></div>
         <span className="tech-stamp">Estrategia + tecnología</span>
       </section>
 
       <section className="contact section" id="contacto">
-        <div className="contact-intro"><div className="section-kicker">06 / Conversemos</div><h2>Sobre la próxima etapa de tu negocio.</h2><p>Si tu empresa está creciendo, transformándose o necesita ordenar su marca, contanos el contexto.</p><a href="mailto:hola@chinapaglia.com">hola@chinapaglia.com <Arrow /></a></div>
+        <div className="contact-intro"><div className="section-kicker">Conversemos</div><h2>Sobre la próxima etapa de tu negocio.</h2><p>Si tu empresa está creciendo, transformándose o necesita ordenar su marca, contanos el contexto.</p><a href="mailto:hola@chinapaglia.com">hola@chinapaglia.com <Arrow /></a></div>
         <form className="contact-form" action="mailto:hola@chinapaglia.com" method="post" encType="text/plain">
           <label><span>Nombre y apellido</span><input type="text" name="nombre" autoComplete="name" required /></label>
           <label><span>Email de trabajo</span><input type="email" name="email" autoComplete="email" required /></label>
