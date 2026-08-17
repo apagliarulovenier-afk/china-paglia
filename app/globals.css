@@ -108,6 +108,7 @@ img { display: block; }
 .case-panel-copy > p { margin: 0; max-width: 33rem; font-size: clamp(1rem, 1.45vw, 1.35rem); line-height: 1.4; }
 .case-panel-media { position: relative; min-height: calc(100svh - 120px); overflow: hidden; background: var(--green); }
 .case-panel-media img { object-fit: cover; }
+.case-panel-media-fontalba img { object-position: center 46%; }
 .fontalba-canvas { position: relative; min-height: calc(100svh - 120px); overflow: hidden; background: var(--green); color: var(--cream); }
 .fontalba-word { position: absolute; left: 4%; top: 4%; font-size: clamp(3rem, 8vw, 9rem); font-weight: 780; letter-spacing: -.075em; }
 .fontalba-tile { position: absolute; width: 27%; aspect-ratio: .82; padding: 1.2rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--cream); background: var(--blue); color: var(--green); transform: rotate(-5deg); }

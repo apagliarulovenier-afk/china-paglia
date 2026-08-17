@@ -113,15 +113,9 @@ export default function Home() {
             <div className="case-meta"><span>02</span><span>Dirección creativa · Marketing digital</span></div>
             <h3>Fontalba</h3>
             <p>Dirección creativa y sistema de contenidos para ordenar la comunicación de una marca de aceite de oliva y sostener su presencia digital.</p>
-            <ProjectModal project="fontalba" title="Fontalba" category="Dirección creativa · Marketing digital" description="Dirección creativa y sistema de contenidos para ordenar la comunicación de una marca de aceite de oliva y sostener su presencia digital." />
+            <ProjectModal project="fontalba" title="Fontalba" category="Dirección creativa · Marketing digital" description="Dirección creativa y sistema de contenidos para ordenar la comunicación de una marca de aceite de oliva y sostener su presencia digital." image="/cases/fontalba.jpg" />
           </div>
-          <div className="fontalba-canvas" aria-label="Composición visual del caso Fontalba">
-            <span className="fontalba-word">FONTALBA</span>
-            <div className="fontalba-tile tile-one"><span>Origen</span><strong>AOVE</strong></div>
-            <div className="fontalba-tile tile-two"><span>Contenido</span><strong>Marca</strong></div>
-            <div className="fontalba-tile tile-three"><span>Sistema</span><strong>Digital</strong></div>
-            <span className="fontalba-note">Caso en desarrollo · 2026</span>
-          </div>
+          <div className="case-panel-media case-panel-media-fontalba"><Image src="/cases/fontalba.jpg" alt="Proyecto de dirección creativa y contenidos para Fontalba" fill unoptimized sizes="(max-width: 900px) 100vw, 58vw" /></div>
         </article>
       </section>
 
