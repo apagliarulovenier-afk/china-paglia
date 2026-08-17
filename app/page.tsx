@@ -64,7 +64,7 @@ export default function Home() {
 
       <section className="hero" id="inicio">
         <div className="hero-eyebrow"><span>Creative partners</span><span>Mendoza · Argentina</span></div>
-        <h1>Identidad <span className="amp">&amp;</span><br />dirección creativa<br /><span className="hero-light">para negocios sólidos.</span></h1>
+        <h1>Identidad <span className="amp">&amp;</span><br />dirección creativa<br /><span className="hero-light">para negocios sólidos</span></h1>
         <div className="hero-bottom">
           <div className="hero-intro">
             <p>Somos Anto y Anita: diseñadoras senior, amigas desde la facultad y hoy socias en una alianza boutique especializada en branding, comunicación y dirección creativa. Convertimos visión de negocio en marca, comunicación y experiencia.</p>
@@ -123,26 +123,26 @@ export default function Home() {
         <div className="section-kicker">Cómo trabajamos</div>
         <div className="working-heading"><h2>¿Cómo trabajamos?</h2><p>No todas las marcas necesitan empezar por el mismo lugar. Definimos el alcance según el momento del negocio, la profundidad del desafío y la capacidad interna para implementarlo.</p></div>
         <div className="working-models">
-          <article><span>01</span><div><h3>Proyecto a medida</h3><p>Alcances definidos para branding, comunicación, campañas, web o nuevos desarrollos.</p></div><a href="#contacto" aria-label="Consultar por un proyecto a medida"><Arrow /></a></article>
-          <article><span>02</span><div><h3>Fee · Partner creativo estratégico</h3><p>Acompañamiento continuo para empresas que necesitan dirección, criterio y capacidad creativa sostenida con modalidad de fee mensual.</p></div><a href="#contacto" aria-label="Consultar por acompañamiento mensual"><Arrow /></a></article>
+          <article className="working-project"><div><h3>Proyecto a medida</h3><p>Alcances definidos para branding, comunicación, campañas, web o nuevos desarrollos.</p></div><a href="#contacto" aria-label="Consultar por un proyecto a medida"><Arrow /></a></article>
+          <article className="working-fee"><div><h3>Fee · Partner creativo estratégico</h3><p>Acompañamiento continuo para empresas que necesitan dirección, criterio y capacidad creativa sostenida con modalidad de fee mensual.</p></div><a href="#contacto" aria-label="Consultar por acompañamiento mensual"><Arrow /></a></article>
         </div>
       </section>
 
       <section className="people section-dark" id="nosotras">
         <div className="section-kicker">Nosotras</div>
         <div className="people-story">
-          <h2>Dos trayectorias.<br />Una mirada compartida.</h2>
-          <div><p>Somos Ana y Anto. Nos conocimos estudiando Diseño y, después de más de una década de recorridos complementarios, en 2026 decidimos reunir nuestra experiencia en branding, dirección creativa, comunicación y negocios en una nueva alianza creativo-estratégica.</p><p>En cada proyecto miramos primero el negocio y después el diseño: preguntamos, ordenamos y construimos junto a nuestros clientes.</p></div>
+          <h2>Dos trayectorias<br />Una mirada compartida</h2>
+          <div><p>Somos Ana y Anto (China y Paglia). Nos conocimos estudiando Diseño en la Universidad Nacional de Cuyo, Mendoza y, después de más de una década de recorridos complementarios, en 2026 decidimos reunir nuestra experiencia en branding, dirección creativa, comunicación y negocios en una nueva alianza creativo-estratégica.</p><p>En cada proyecto miramos primero el negocio y después el diseño: preguntamos, ordenamos y construimos junto a nuestros clientes.</p></div>
         </div>
 
         <div className="people-grid">
           <article className="person-card">
-            <div className="person-top"><Image src="/people/ana.webp" alt="Ana Paula Sánchez" width={112} height={112} unoptimized /><span>Branding · Real Estate · Comunicación</span></div>
-            <h3>Ana Paula Sánchez</h3>
-            <p>Ana se especializa en branding, marketing y comunicación corporativa, con experiencia especialmente vinculada al real estate. Conoce el negocio inmobiliario desde adentro y tiene una facilidad natural para conectar personas, leer contextos y convertir conversaciones complejas en decisiones claras.</p>
+            <div className="person-top"><Image src="/people/ana.webp" alt="Ana Paula Sanchez" width={112} height={112} unoptimized /><span>Branding · Real Estate · Comunicación</span></div>
+            <h3>Ana Paula Sanchez</h3>
+            <p>Ana se especializa en branding, marketing y comunicación corporativa, con experiencia especialmente vinculada al real estate, desarrollos comerciales y sector público. Tiene una facilidad natural para conectar personas, leer contextos y convertir conversaciones complejas en decisiones claras.</p>
             <p className="person-detail">Practica yoga y juega al pádel: equilibrio y reflejos que también aparecen en su forma de trabajar.</p>
             <a href="https://www.linkedin.com/in/anitasanchezr" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-            <div className="person-gallery" aria-label="Selección de trabajos previos de Ana Paula Sánchez">{anaWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="10vw" /></div>)}</div>
+            <div className="person-gallery" aria-label="Selección de trabajos previos de Ana Paula Sanchez">{anaWork.map((src) => <div key={src}><Image src={src} alt="" fill unoptimized sizes="10vw" /></div>)}</div>
           </article>
           <article className="person-card person-card-alt">
             <div className="person-top"><Image src="/people/anto.webp" alt="Antonella Pagliarulo" width={112} height={112} unoptimized /><span>Branding · Dirección creativa · Diseño</span></div>
@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       <section className="contact section" id="contacto">
-        <div className="contact-intro"><div className="section-kicker">Conversemos</div><h2>Sobre la próxima etapa de tu negocio.</h2><p>Si tu empresa está creciendo, transformándose o necesita ordenar su marca, contanos el contexto.</p><a href="mailto:hola@chinapaglia.com">hola@chinapaglia.com <Arrow /></a></div>
+        <div className="contact-intro"><div className="section-kicker">Contacto</div><h2>Sobre la próxima etapa de tu negocio</h2><p>Si tu empresa está creciendo, transformándose o necesita ordenar su marca, contanos el contexto.</p><a href="mailto:hola@chinapaglia.com">hola@chinapaglia.com <Arrow /></a></div>
         <form className="contact-form" action="mailto:hola@chinapaglia.com" method="post" encType="text/plain">
           <label><span>Nombre y apellido</span><input type="text" name="nombre" autoComplete="name" required /></label>
           <label><span>Email de trabajo</span><input type="email" name="email" autoComplete="email" required /></label>
